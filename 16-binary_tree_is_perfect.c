@@ -36,7 +36,8 @@ int is_perfect(const binary_tree_t *tree, int d, int level)
 	if (tree->left == NULL || tree->right == NULL)
 		return (0);
 	/*Leftand right subtrees must be perfect */
-	return (is_perfect(tree->left, d, level + 1) && is_perfect(tree->right, d, level + 1));
+	return (is_perfect(tree->left, d, level + 1) &&
+			is_perfect(tree->right, d, level + 1));
 }
 
 /**
